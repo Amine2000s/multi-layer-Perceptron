@@ -1,4 +1,5 @@
 # Modèle de classification avec MLP
+lien de rapport : https://drive.google.com/file/d/1_e13_MkH1x34IqPzhe0Qoboyrcw1ByJ0/view?usp=sharing
 
 ## Description
 Ce projet consiste à développer et tester un modèle de perceptron multicouche (MLP) pour effectuer une classification binaire à l'aide du jeu de données modifié "bank.csv".  
@@ -59,4 +60,65 @@ Le modèle utilise différentes architectures et paramètres pour optimiser ses 
   - Suppression de colonnes inutiles comme `contact` et `default`.
   - Encodage des colonnes catégorielles comme `job` et `marital status`.
 
-lien de rapport : https://drive.google.com/file/d/1_e13_MkH1x34IqPzhe0Qoboyrcw1ByJ0/view?usp=sharing
+# **Classification Model with MLP**  
+Report link: [Google Drive Report](https://drive.google.com/file/d/1_e13_MkH1x34IqPzhe0Qoboyrcw1ByJ0/view?usp=sharing)
+
+## Description  
+This project consists of developing and testing a multi-layer perceptron (MLP) model to perform binary classification using the modified "bank.csv" dataset.  
+The model uses different architectures and parameters to optimize its performance.
+
+### Key Points:  
+- Use of hidden layers with activation functions such as ReLU and Tanh.
+- Hyperparameter tuning: learning rate, batch size, and epochs.
+- Evaluation based on accuracy and loss ("binary_crossentropy").
+
+### Prerequisites  
+- **Python**: Version 3.7 or higher  
+- **Environment**: Jupyter Notebook  
+- **Required Libraries**:  
+  - TensorFlow  
+  - NumPy  
+  - Pandas  
+  - Matplotlib  
+  - scikit-learn (optional)
+
+## Experiments  
+### Experiment 1: Basic MLP  
+- Architecture: One input layer with ReLU activation and one output layer with Sigmoid activation.
+- Parameters:
+  - Loss function: binary_crossentropy  
+  - Metric: accuracy  
+  - Epochs: 50  
+  - Batch size: 32  
+  - Learning rate: 0.001  
+- **Results**: The performance is decent, but there is room for improvement.
+
+### Experiment 2: Deeper MLP  
+- Architecture: One input layer with ReLU activation, two hidden layers (ReLU), and one output layer with Sigmoid activation.
+- Parameters:
+  - Loss function: binary_crossentropy  
+  - Metric: accuracy  
+  - Epochs: 50 (increased to 100)  
+  - Learning rate: 0.001 (increased to 0.008)  
+  - Batch size: 32 (increased to 64)  
+- Modifications:
+  - Added a Tanh layer (16 neurons).
+  - Added additional ReLU layers with 32 and 16 neurons.  
+- **Results**: Marginal improvements, but further adjustments are needed.
+
+### Experiment 3: MLP with Tanh Activation  
+- Architecture: One input layer and one hidden layer with Tanh activation (16 neurons), and one output layer with Sigmoid activation.
+- Parameters:
+  - Loss function: binary_crossentropy  
+  - Metric: accuracy  
+  - Epochs: 50  
+  - Batch size: 64  
+  - Learning rate: 0.001  
+- Modifications:
+  - Added two ReLU layers (16 neurons each).  
+- **Results**: Adjustments did not significantly improve performance.
+
+## Data  
+- **Used data**: `bank.csv`, modified to include:
+  - Removal of unnecessary columns like `contact` and `default`.
+  - Encoding categorical columns such as `job` and `marital status`.
